@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:powderblue;">
+    <h1>Dört İşlem</h1>
+    <table>
+        <tr>
+            <td>
+                <label>1. Sayı: </label>
+                <input type="text" id="birinciSayi">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>2. Sayı: </label>
+                <input type="text" id="ikinciSayi">
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" id="btnTopla" value="TOPLA" style="background-color:rgb(255, 0, 0);">
+    <input type="button" id="btnCikar" value="ÇIKAR" style="background-color:rgb(255, 0, 0);">
+    <input type="button" id="btnCarp" value="ÇARP" style="background-color:rgb(255, 0, 0);">
+    <input type="button" id="btnBolme" value="BÖL" style="background-color:rgb(255, 0, 0);">
+
+    <div id="sonucKutusu"></div>
+    <img src="https://www.sterlinglawyers.com/wp-content/uploads/calculator.png"/>
+    <table style="background-color:rgb(255, 255, 255);">
+        
+        <tr>
+            <td>
+                <label>Isim-Soyisim: Alperen BAYRAKDAR</label>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>Ogrenci NO: 200601079</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Ders: BIL209 WEB TABANLI PROGRAMLAMA</label>
+            </td>
+        </tr>
+    </table>
+    
+    
+
+<script>
+    /*TOPLAMA*/
+    var btn_Topla=document.getElementById("btnTopla");
+    btn_Topla.onclick=function()
+    {
+        var sayi1=Number(document.getElementById("birinciSayi").value);
+        var sayi2=Number(document.getElementById("ikinciSayi").value);
+        var sonuc=sayi1+sayi2;
+        document.getElementById("sonucKutusu").innerHTML="Sonuç: " + sonuc
+    }
+
+    /*ÇIKARMA*/
+    var btn_Cikar=document.getElementById("btnCikar");
+    btn_Cikar.onclick=function()
+    {
+        var sayi1=Number(document.getElementById("birinciSayi").value);
+        var sayi2=Number(document.getElementById("ikinciSayi").value);
+        var sonuc=sayi1-sayi2;
+        document.getElementById("sonucKutusu").innerHTML="Sonuç: " + sonuc
+    }
+
+    /*ÇARPMA*/
+    var btn_Carp=document.getElementById("btnCarp");
+    btn_Carp.onclick=function()
+    {
+        var sayi1=Number(document.getElementById("birinciSayi").value);
+        var sayi2=Number(document.getElementById("ikinciSayi").value);
+        var sonuc=sayi1*sayi2;
+        document.getElementById("sonucKutusu").innerHTML="Sonuç: " + sonuc
+    }
+
+    /*BÖLME*/
+    var btn_Bolme=document.getElementById("btnBolme");
+    btn_Bolme.onclick=function()
+    {
+        var sayi1=Number(document.getElementById("birinciSayi").value);
+        var sayi2=Number(document.getElementById("ikinciSayi").value);
+        var sonuc=sayi1/sayi2;
+        document.getElementById("sonucKutusu").innerHTML="Sonuç: " + sonuc
+    }
+
+</script>
+</body>
+</html>
